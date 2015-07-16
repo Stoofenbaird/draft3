@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Petnames</h1>
+<h1>Petnames List</h1>
 
 <table>
   <thead>
@@ -12,7 +12,7 @@
 
   <tbody>
     <% @petnames.each do |petname| %>
-      <tr>
+      <tr id="<%=dom_id(petname) %>">
         <td><%= petname.name %></td>
         <td><%= link_to 'Show', petname %></td>
         <td><%= link_to 'Edit', edit_petname_path(petname) %></td>
